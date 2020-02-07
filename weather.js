@@ -9,11 +9,6 @@ const cities = {
   PuertoRico: 3837213
 };
 
-const messages = {
-  yes: "Det är hett som i Trinidad!",
-  no: "Det är inte längre hett som i Trinidad :("
-};
-
 let latestNotification;
 
 function getWeather(city) {
