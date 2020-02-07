@@ -59,36 +59,37 @@ async function refresh() {
   const answer = document.getElementById("answer");
 
   await getWeather(cities.Stockholm).then(data => {
+    console.log(data);
     stockholm.name.innerText = data.name;
-    stockholm.temp.innerText = data.main.temp;
+    stockholm.temp.innerText = "temp " + data.main.temp;
 
     temp1 = data.main.temp;
   });
 
   await getWeather(cities.Panama).then(data => {
     panama.name.innerText = data.name;
-    panama.temp.innerText = data.main.temp;
+    panama.temp.innerText = "temp " + data.main.temp;
 
     temp2 = data.main.temp;
   });
 
   await getWeather(cities.Medellin).then(data => {
     medellin.name.innerText = data.name;
-    medellin.temp.innerText = data.main.temp;
+    medellin.temp.innerText = "temp " + data.main.temp;
 
     temp3 = data.main.temp;
   });
 
   await getWeather(cities.SanAndres).then(data => {
     sanAndres.name.innerText = data.name;
-    sanAndres.temp.innerText = data.main.temp;
+    sanAndres.temp.innerText = "temp " + data.main.temp;
 
     temp4 = data.main.temp;
   });
 
   await getWeather(cities.Cartagena).then(data => {
     cartagena.name.innerText = data.name;
-    cartagena.temp.innerText = data.main.temp;
+    cartagena.temp.innerText = "temp " + data.main.temp;
 
     temp5 = data.main.temp;
   });
@@ -101,22 +102,6 @@ async function refresh() {
   });
 
   const tempDiff = Math.abs(temp1 - temp2);
-
-  //   if (tempDiff < 5) {
-  //     if (tempDiff < 3) {
-  //       answer.innerText = "Ja";
-
-  //       notify(messages.yes);
-  //     } else {
-  //       answer.innerText = "Typ";
-  //     }
-  //   } else {
-  //     answer.innerText = "Nej";
-
-  //     if (latestNotification === messages.yes) {
-  //       notify(messages.no);
-  //     }
-  //   }
 
   const time = new Date();
 

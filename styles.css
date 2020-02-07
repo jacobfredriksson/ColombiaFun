@@ -8,3 +8,12 @@
   padding: 0 20px;
   flex: 1;
 }
+
+h2 {
+  font-size: 35px;
+  text-align: center;
+}
+
+.city-name {
+  color: #3ca73c;
+}
