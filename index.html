@@ -13,49 +13,50 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <h1>Time left until we are leaving boys</h1>
-    <p id="demo"></p>
+    <div class="wrapper">
+      <h1>Time left until we are leaving boys</h1>
+      <p id="demo"></p>
 
-    <h2>places we will go to</h2>
-    <p id="answer"></p>
-    <div class="cities">
-      <div class="weather-stats">
-        <p id="panama"></p>
-        <p class="city-name" id="city1-name"></p>
-        <p class="city-temp" id="city1-temp"></p>
+      <h2>places we will go to</h2>
+      <div class="cities">
+        <div class="weather-stats">
+          <p id="panama"></p>
+          <p class="city-name" id="city1-name"></p>
+          <p class="city-temp" id="city1-temp"></p>
+        </div>
+        <div class="weather-stats">
+          <p id="medellin"></p>
+          <p class="city-name" id="city2-name"></p>
+          <p class="city-temp" id="city2-temp"></p>
+        </div>
+        <div class="weather-stats">
+          <p id="sanandres"></p>
+          <p class="city-name" id="city3-name"></p>
+          <p class="city-temp" id="city3-temp"></p>
+        </div>
+        <div class="weather-stats">
+          <p id="cartagena"></p>
+          <p class="city-name" id="city4-name"></p>
+          <p class="city-temp" id="city4-temp"></p>
+        </div>
+        <div class="weather-stats">
+          <p id="puertorico"></p>
+          <p class="city-name" id="city5-name"></p>
+          <p class="city-temp" id="city5-temp"></p>
+        </div>
       </div>
-      <div class="weather-stats">
-        <p id="medellin"></p>
-        <p class="city-name" id="city2-name"></p>
-        <p class="city-temp" id="city2-temp"></p>
-      </div>
-      <div class="weather-stats">
-        <p id="sanandres"></p>
-        <p class="city-name" id="city3-name"></p>
-        <p class="city-temp" id="city3-temp"></p>
-      </div>
-      <div class="weather-stats">
-        <p id="cartagena"></p>
-        <p class="city-name" id="city4-name"></p>
-        <p class="city-temp" id="city4-temp"></p>
-      </div>
-      <div class="weather-stats">
-        <p id="puertorico"></p>
-        <p class="city-name" id="city5-name"></p>
-        <p class="city-temp" id="city5-temp"></p>
-      </div>
+      <p class="updated">
+        Senast uppdaterad <time id="updated-time" datetime=""></time>
+      </p>
     </div>
-    <p class="updated">
-      Senast uppdaterad <time id="updated-time" datetime=""></time>
-    </p>
 
     <script>
       // Set the date we're counting down to
-      var countDownPanama = new Date("Apr 24, 2020 06:00:00").getTime();
-      var countDownMedellin = new Date("Apr 27, 2020 06:00:00").getTime();
-      var countDownSanAndres = new Date("May 03, 2020 06:00:00").getTime();
-      var countDownDateCartagena = new Date("May 07, 2020 06:00:00").getTime();
-      var countDownDatePuertoRico = new Date("May 11, 2020 06:00:00").getTime();
+      var countDownPanama = new Date("Apr 24, 2020 00:00:00").getTime();
+      var countDownMedellin = new Date("Apr 27, 2020 00:00:00").getTime();
+      var countDownSanAndres = new Date("May 03, 2020 00:00:00").getTime();
+      var countDownDateCartagena = new Date("May 07, 2020 00:00:00").getTime();
+      var countDownDatePuertoRico = new Date("May 11, 2020 00:00:00").getTime();
 
       // Update the count down every 1 second
       var x = setInterval(function() {
@@ -88,8 +89,7 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Output the result in an element with id="demo"
-        document.getElementById(id).innerHTML =
-          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        document.getElementById(id).innerHTML = days + "d " + hours + "h ";
 
         // If the count down is over, write some text
         if (distance < 0) {

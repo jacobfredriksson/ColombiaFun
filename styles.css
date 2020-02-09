@@ -1,3 +1,7 @@
+.wrapper {
+  padding: 5rem 10rem;
+}
+
 .cities {
   justify-content: center;
   flex-wrap: wrap;
@@ -6,7 +10,10 @@
 
 .weather-stats {
   padding: 0 20px;
-  flex: 1;
+  flex-grow: 1;
+  border: 1px solid gray;
+  padding: 15px;
+  margin: 10px;
 }
 
 h2 {
