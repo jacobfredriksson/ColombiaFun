@@ -2,6 +2,12 @@
   padding: 5rem 10rem;
 }
 
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding: 1rem 2rem;
+  }
+}
+
 .cities {
   justify-content: center;
   flex-wrap: wrap;
