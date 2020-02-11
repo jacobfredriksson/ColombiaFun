@@ -37,18 +37,18 @@ async function refresh() {
   };
 
   const sanAndres = {
-    name: document.getElementById("city3-name"),
-    temp: document.getElementById("city3-temp")
-  };
-
-  const cartagena = {
     name: document.getElementById("city4-name"),
     temp: document.getElementById("city4-temp")
   };
 
-  const puertoRico = {
+  const cartagena = {
     name: document.getElementById("city5-name"),
     temp: document.getElementById("city5-temp")
+  };
+
+  const puertoRico = {
+    name: document.getElementById("city6-name"),
+    temp: document.getElementById("city6-temp")
   };
 
   const answer = document.getElementById("answer");
@@ -91,7 +91,7 @@ async function refresh() {
 
   await getWeather(cities.PuertoRico).then(data => {
     puertoRico.name.innerText = data.name;
-    puertoRico.temp.innerText = data.main.temp;
+    puertoRico.temp.innerText = "temp " + data.main.temp;
 
     temp6 = data.main.temp;
   });
