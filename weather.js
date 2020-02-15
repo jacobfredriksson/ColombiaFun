@@ -80,8 +80,8 @@ async function refresh() {
     );
     stockholm.name.innerText = data.name;
     stockholm.temp.innerText = "temp " + data.main.temp;
-    stockholm.sunrise.innerText = "sunrise " + citySunrise;
-    stockholm.sunset.innerText = "sunset " + citySunset;
+    stockholm.sunrise.innerText = "🌅 " + citySunrise;
+    stockholm.sunset.innerText = "🌇  " + citySunset;
 
     temp1 = data.main.temp;
   });
@@ -101,8 +101,8 @@ async function refresh() {
     );
     panama.name.innerText = data.name;
     panama.temp.innerText = "temp " + data.main.temp;
-    panama.sunrise.innerText = "sunrise " + citySunrise;
-    panama.sunset.innerText = "sunset " + citySunset;
+    panama.sunrise.innerText = "🌅 " + citySunrise;
+    panama.sunset.innerText = "🌇  " + citySunset;
 
     temp2 = data.main.temp;
   });
@@ -122,8 +122,8 @@ async function refresh() {
     );
     medellin.name.innerText = data.name;
     medellin.temp.innerText = "temp " + data.main.temp;
-    medellin.sunrise.innerText = "sunrise " + citySunrise;
-    medellin.sunset.innerText = "sunset " + citySunset;
+    medellin.sunrise.innerText = "🌅 " + citySunrise;
+    medellin.sunset.innerText = "🌇  " + citySunset;
     temp3 = data.main.temp;
   });
 
@@ -142,8 +142,8 @@ async function refresh() {
     );
     sanAndres.name.innerText = data.name;
     sanAndres.temp.innerText = "temp " + data.main.temp;
-    sanAndres.sunrise.innerText = "sunrise " + citySunrise;
-    sanAndres.sunset.innerText = "sunset " + citySunset;
+    sanAndres.sunrise.innerText = "🌅 " + citySunrise;
+    sanAndres.sunset.innerText = "🌇  " + citySunset;
     temp4 = data.main.temp;
   });
 
@@ -162,8 +162,8 @@ async function refresh() {
     );
     cartagena.name.innerText = data.name;
     cartagena.temp.innerText = "temp " + data.main.temp;
-    cartagena.sunrise.innerText = "sunrise " + citySunrise;
-    cartagena.sunset.innerText = "sunset " + citySunset;
+    cartagena.sunrise.innerText = "🌅 " + citySunrise;
+    cartagena.sunset.innerText = "🌇  " + citySunset;
     temp5 = data.main.temp;
   });
 
@@ -182,8 +182,8 @@ async function refresh() {
     );
     puertoRico.name.innerText = data.name;
     puertoRico.temp.innerText = "temp " + data.main.temp;
-    puertoRico.sunrise.innerText = "sunrise " + citySunrise;
-    puertoRico.sunset.innerText = "sunset " + citySunset;
+    puertoRico.sunrise.innerText = "🌅 " + citySunrise;
+    puertoRico.sunset.innerText = "🌇  " + citySunset;
     temp6 = data.main.temp;
   });
 
