@@ -11,48 +11,74 @@
       }
     </style>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="wrapper">
-      <h1>Time left until we are leaving boys</h1>
+      <h1>Lets go!</h1>
       <p id="demo"></p>
 
-      <h2>places we will go to</h2>
+      <h2>places we will be visiting</h2>
       <div class="cities">
         <div class="weather-stats">
-          <p id="">We are here</p>
           <p class="city-name" id="city1-name"></p>
+          <p id="">We are here</p>
           <p class="city-temp" id="city1-temp"></p>
+          <div class="smallbox">
+            <p>beer price: 65kr</p>
+            <p class="stockholm-localtime"></p>
+          </div>
         </div>
         <div class="weather-stats">
-          <p id="panama"></p>
           <p class="city-name" id="city2-name"></p>
+          <p id="panama"></p>
           <p class="city-temp" id="city2-temp"></p>
+          <div class="smallbox">
+            <p>beer price: 30kr</p>
+            <p class="other-destinations-localtime"></p>
+          </div>
         </div>
         <div class="weather-stats">
-          <p id="medellin"></p>
           <p class="city-name" id="city3-name"></p>
+          <p id="medellin"></p>
           <p class="city-temp" id="city3-temp"></p>
+          <div class="smallbox">
+            <p>beer price: 12kr</p>
+            <p class="other-destinations-localtime"></p>
+          </div>
         </div>
         <div class="weather-stats">
-          <p id="sanandres"></p>
           <p class="city-name" id="city4-name"></p>
+          <p id="sanandres"></p>
           <p class="city-temp" id="city4-temp"></p>
+          <div class="smallbox">
+            <p>beer price: 12kr</p>
+            <p class="other-destinations-localtime"></p>
+          </div>
         </div>
         <div class="weather-stats">
-          <p id="cartagena"></p>
           <p class="city-name" id="city5-name"></p>
+          <p id="cartagena"></p>
           <p class="city-temp" id="city5-temp"></p>
+          <div class="smallbox">
+            <p>beer price: 12kr</p>
+            <p class="other-destinations-localtime"></p>
+          </div>
         </div>
         <div class="weather-stats">
-          <p id="puertorico"></p>
           <p class="city-name" id="city6-name"></p>
+          <p id="puertorico"></p>
           <p class="city-temp" id="city6-temp"></p>
+          <div class="smallbox">
+            <p>beer price: 21kr</p>
+            <p class="puertorico-localtime"></p>
+          </div>
         </div>
       </div>
-      <p class="updated">
-        Senast uppdaterad <time id="updated-time" datetime=""></time>
-      </p>
+      <p class="updated">Updated <time id="updated-time" datetime=""></time></p>
     </div>
 
     <script>
@@ -84,7 +110,6 @@
       }, 1000);
 
       function test(distance, id) {
-        console.log(distance, id);
         // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor(
@@ -103,6 +128,41 @@
           document.getElementById(id).innerHTML = "We are here!";
         }
       }
+
+      var otherDestinations = new Date().toLocaleString("en-US", {
+        timeZone: "America/Panama"
+      });
+      otherDestinations = new Date(otherDestinations);
+
+      var puertoRico = new Date().toLocaleString("en-US", {
+        timeZone: "America/Puerto_Rico"
+      });
+      puertoRico = new Date(puertoRico);
+
+      var stockholmTime = new Date().toLocaleString("en-US", {
+        timeZone: "Europe/Stockholm"
+      });
+      stockholmTime = new Date(stockholmTime);
+
+      stockholmTime = stockholmTime.toLocaleTimeString().slice(0, 5);
+
+      var otherDestinationsTime = otherDestinations
+        .toLocaleTimeString()
+        .slice(0, 5);
+
+      var puertoRicoTime = puertoRico.toLocaleTimeString().slice(0, 5);
+
+      document.querySelectorAll(".puertorico-localtime").forEach(el => {
+        el.innerHTML = "Localtime: " + puertoRicoTime;
+      });
+
+      document.querySelectorAll(".other-destinations-localtime").forEach(el => {
+        el.innerHTML = "Localtime: " + otherDestinationsTime;
+      });
+
+      document.querySelectorAll(".stockholm-localtime").forEach(el => {
+        el.innerHTML = "Localtime: " + stockholmTime;
+      });
       //   if (tempDiff < 5) {
       //     if (tempDiff < 3) {
       //       answer.innerText = "Ja";

@@ -2,6 +2,7 @@ body,
 html {
   padding: 0;
   margin: 0;
+  font-family: "Sriracha", cursive;
 }
 
 .wrapper {
@@ -32,20 +33,23 @@ html {
   -moz-box-shadow: 0px 0px 24px 0px rgba(51, 112, 48, 1);
   box-shadow: 5px 15px 24px 4px rgba(51, 112, 48, 1);
   z-index: 10;
-  width: 200px;
+  width: 250px;
 }
 p {
   color: #fff;
+  margin: 0;
 }
 
 h1 {
   color: #fff;
+  margin: 0;
 }
 
 h2 {
   font-size: 35px;
   text-align: center;
   color: #fff;
+  margin: 0;
 }
 
 .city-name {
@@ -99,11 +103,29 @@ h2 {
 }
 .weather-stats:nth-child(6) {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(images/puertorico.jpeg);
+    url(images/puertorico.jpg);
   background-position: center center;
   background-size: cover;
 }
 
 .updated {
   margin: 20px;
+}
+
+.smallbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: #3ca73c;
+}
+
+.smallbox p {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1rem;
+  /* text-align: left; */
+  width: 100%;
+  margin: 0;
 }
