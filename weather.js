@@ -23,76 +23,167 @@ async function refresh() {
 
   const stockholm = {
     name: document.getElementById("city1-name"),
-    temp: document.getElementById("city1-temp")
+    temp: document.getElementById("city1-temp"),
+    sunrise: document.getElementById("city1-sunrise"),
+    sunset: document.getElementById("city1-sunset")
   };
 
   const panama = {
     name: document.getElementById("city2-name"),
-    temp: document.getElementById("city2-temp")
+    temp: document.getElementById("city2-temp"),
+    sunrise: document.getElementById("city2-sunrise"),
+    sunset: document.getElementById("city2-sunset")
   };
 
   const medellin = {
     name: document.getElementById("city3-name"),
-    temp: document.getElementById("city3-temp")
+    temp: document.getElementById("city3-temp"),
+    sunrise: document.getElementById("city3-sunrise"),
+    sunset: document.getElementById("city3-sunset")
   };
 
   const sanAndres = {
     name: document.getElementById("city4-name"),
-    temp: document.getElementById("city4-temp")
+    temp: document.getElementById("city4-temp"),
+    sunrise: document.getElementById("city4-sunrise"),
+    sunset: document.getElementById("city4-sunset")
   };
 
   const cartagena = {
     name: document.getElementById("city5-name"),
-    temp: document.getElementById("city5-temp")
+    temp: document.getElementById("city5-temp"),
+    sunrise: document.getElementById("city5-sunrise"),
+    sunset: document.getElementById("city5-sunset")
   };
 
   const puertoRico = {
     name: document.getElementById("city6-name"),
-    temp: document.getElementById("city6-temp")
+    temp: document.getElementById("city6-temp"),
+    sunrise: document.getElementById("city6-sunrise"),
+    sunset: document.getElementById("city6-sunset")
   };
 
   const answer = document.getElementById("answer");
 
   await getWeather(cities.Stockholm).then(data => {
-    console.log(data);
+    var citySunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "Europe/Stockholm"
+      }
+    );
+    var citySunset = new Date(data.sys.sunset * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "Europe/Stockholm"
+      }
+    );
     stockholm.name.innerText = data.name;
     stockholm.temp.innerText = "temp " + data.main.temp;
+    stockholm.sunrise.innerText = "sunrise " + citySunrise;
+    stockholm.sunset.innerText = "sunset " + citySunset;
 
     temp1 = data.main.temp;
   });
 
   await getWeather(cities.Panama).then(data => {
+    var citySunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "America/Panama"
+      }
+    );
+    var citySunset = new Date(data.sys.sunset * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "America/Panama"
+      }
+    );
     panama.name.innerText = data.name;
     panama.temp.innerText = "temp " + data.main.temp;
+    panama.sunrise.innerText = "sunrise " + citySunrise;
+    panama.sunset.innerText = "sunset " + citySunset;
 
     temp2 = data.main.temp;
   });
 
   await getWeather(cities.Medellin).then(data => {
+    var citySunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "America/Bogota"
+      }
+    );
+    var citySunset = new Date(data.sys.sunset * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "America/Bogota"
+      }
+    );
     medellin.name.innerText = data.name;
     medellin.temp.innerText = "temp " + data.main.temp;
-
+    medellin.sunrise.innerText = "sunrise " + citySunrise;
+    medellin.sunset.innerText = "sunset " + citySunset;
     temp3 = data.main.temp;
   });
 
   await getWeather(cities.SanAndres).then(data => {
+    var citySunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "America/Panama"
+      }
+    );
+    var citySunset = new Date(data.sys.sunset * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "America/Panama"
+      }
+    );
     sanAndres.name.innerText = data.name;
     sanAndres.temp.innerText = "temp " + data.main.temp;
-
+    sanAndres.sunrise.innerText = "sunrise " + citySunrise;
+    sanAndres.sunset.innerText = "sunset " + citySunset;
     temp4 = data.main.temp;
   });
 
   await getWeather(cities.Cartagena).then(data => {
+    var citySunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "America/Panama"
+      }
+    );
+    var citySunset = new Date(data.sys.sunset * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "America/Panama"
+      }
+    );
     cartagena.name.innerText = data.name;
     cartagena.temp.innerText = "temp " + data.main.temp;
-
+    cartagena.sunrise.innerText = "sunrise " + citySunrise;
+    cartagena.sunset.innerText = "sunset " + citySunset;
     temp5 = data.main.temp;
   });
 
   await getWeather(cities.PuertoRico).then(data => {
+    var citySunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "America/Puerto_Rico"
+      }
+    );
+    var citySunset = new Date(data.sys.sunset * 1000).toLocaleTimeString(
+      "en-US",
+      {
+        timeZone: "America/Puerto_Rico"
+      }
+    );
     puertoRico.name.innerText = data.name;
     puertoRico.temp.innerText = "temp " + data.main.temp;
-
+    puertoRico.sunrise.innerText = "sunrise " + citySunrise;
+    puertoRico.sunset.innerText = "sunset " + citySunset;
     temp6 = data.main.temp;
   });
 

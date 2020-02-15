@@ -19,7 +19,6 @@
   <body>
     <div class="wrapper">
       <h1>Lets go!</h1>
-      <p id="demo"></p>
 
       <h2>places we will be visiting</h2>
       <div class="cities">
@@ -28,8 +27,10 @@
           <p id="">We are here</p>
           <p class="city-temp" id="city1-temp"></p>
           <div class="smallbox">
-            <p>beer price: 65kr</p>
+            <p>beer price - 65kr</p>
             <p class="stockholm-localtime"></p>
+            <p id="city1-sunrise"></p>
+            <p id="city1-sunset"></p>
           </div>
         </div>
         <div class="weather-stats">
@@ -37,8 +38,10 @@
           <p id="panama"></p>
           <p class="city-temp" id="city2-temp"></p>
           <div class="smallbox">
-            <p>beer price: 30kr</p>
+            <p>beer price - 30kr</p>
             <p class="other-destinations-localtime"></p>
+            <p id="city2-sunrise"></p>
+            <p id="city2-sunset"></p>
           </div>
         </div>
         <div class="weather-stats">
@@ -46,8 +49,10 @@
           <p id="medellin"></p>
           <p class="city-temp" id="city3-temp"></p>
           <div class="smallbox">
-            <p>beer price: 12kr</p>
+            <p>beer price - 12kr</p>
             <p class="other-destinations-localtime"></p>
+            <p id="city3-sunrise"></p>
+            <p id="city3-sunset"></p>
           </div>
         </div>
         <div class="weather-stats">
@@ -55,8 +60,10 @@
           <p id="sanandres"></p>
           <p class="city-temp" id="city4-temp"></p>
           <div class="smallbox">
-            <p>beer price: 12kr</p>
+            <p>beer price - 12kr</p>
             <p class="other-destinations-localtime"></p>
+            <p id="city4-sunrise"></p>
+            <p id="city4-sunset"></p>
           </div>
         </div>
         <div class="weather-stats">
@@ -64,8 +71,10 @@
           <p id="cartagena"></p>
           <p class="city-temp" id="city5-temp"></p>
           <div class="smallbox">
-            <p>beer price: 12kr</p>
+            <p>beer price - 12kr</p>
             <p class="other-destinations-localtime"></p>
+            <p id="city5-sunrise"></p>
+            <p id="city5-sunset"></p>
           </div>
         </div>
         <div class="weather-stats">
@@ -73,8 +82,10 @@
           <p id="puertorico"></p>
           <p class="city-temp" id="city6-temp"></p>
           <div class="smallbox">
-            <p>beer price: 21kr</p>
+            <p>beer price - 21kr</p>
             <p class="puertorico-localtime"></p>
+            <p id="city6-sunrise"></p>
+            <p id="city6-sunset"></p>
           </div>
         </div>
       </div>
@@ -106,7 +117,6 @@
         test(distanceSanAndres, "sanandres");
         test(distanceCartagena, "cartagena");
         test(distancePuertoRico, "puertorico");
-        test(distancePanama, "demo");
       }, 1000);
 
       function test(distance, id) {
@@ -118,7 +128,6 @@
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Output the result in an element with id="demo"
         document.getElementById(id).innerHTML = days + "d " + hours + "h ";
 
         // If the count down is over, write some text
@@ -153,16 +162,17 @@
       var puertoRicoTime = puertoRico.toLocaleTimeString().slice(0, 5);
 
       document.querySelectorAll(".puertorico-localtime").forEach(el => {
-        el.innerHTML = "Localtime: " + puertoRicoTime;
+        el.innerHTML = "Localtime " + puertoRicoTime;
       });
 
       document.querySelectorAll(".other-destinations-localtime").forEach(el => {
-        el.innerHTML = "Localtime: " + otherDestinationsTime;
+        el.innerHTML = "Localtime - " + otherDestinationsTime;
       });
 
       document.querySelectorAll(".stockholm-localtime").forEach(el => {
-        el.innerHTML = "Localtime: " + stockholmTime;
+        el.innerHTML = "Localtime - " + stockholmTime;
       });
+
       //   if (tempDiff < 5) {
       //     if (tempDiff < 3) {
       //       answer.innerText = "Ja";
