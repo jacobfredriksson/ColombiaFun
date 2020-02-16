@@ -27,10 +27,24 @@
           <p id="">We are here</p>
           <p class="city-temp" id="city1-temp"></p>
           <div class="smallbox">
-            <p class="stockholm-localtime"></p>
-            <p>🍺- 65kr</p>
-            <p id="city1-sunrise"></p>
-            <p id="city1-sunset"></p>
+            <div class="smallbox__item">
+              <div class="smallbox__item-content stockholm-localtime"></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content">
+                <span> 🍺 </span>
+                <p>65kr</p>
+              </div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city1-sunrise"></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city1-sunset"></div>
+            </div>
           </div>
         </div>
         <div class="weather-stats">
@@ -38,10 +52,26 @@
           <p id="panama"></p>
           <p class="city-temp" id="city2-temp"></p>
           <div class="smallbox">
-            <p class="other-destinations-localtime"></p>
-            <p>🍺- 30kr</p>
-            <p id="city2-sunrise"></p>
-            <p id="city2-sunset"></p>
+            <div class="smallbox__item">
+              <div
+                class="smallbox__item-content other-destinations-localtime"
+              ></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content">
+                <span> 🍺 </span>
+                <p>30kr</p>
+              </div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city2-sunrise"></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city2-sunset"></div>
+            </div>
           </div>
         </div>
         <div class="weather-stats">
@@ -49,10 +79,26 @@
           <p id="medellin"></p>
           <p class="city-temp" id="city3-temp"></p>
           <div class="smallbox">
-            <p class="other-destinations-localtime"></p>
-            <p>🍺- 12kr</p>
-            <p id="city3-sunrise"></p>
-            <p id="city3-sunset"></p>
+            <div class="smallbox__item">
+              <div
+                class="smallbox__item-content other-destinations-localtime"
+              ></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content">
+                <span> 🍺 </span>
+                <p>12kr</p>
+              </div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city3-sunrise"></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city3-sunset"></div>
+            </div>
           </div>
         </div>
         <div class="weather-stats">
@@ -60,10 +106,26 @@
           <p id="sanandres"></p>
           <p class="city-temp" id="city4-temp"></p>
           <div class="smallbox">
-            <p class="other-destinations-localtime"></p>
-            <p>🍺- 12kr</p>
-            <p id="city4-sunrise"></p>
-            <p id="city4-sunset"></p>
+            <div class="smallbox__item">
+              <div
+                class="smallbox__item-content other-destinations-localtime"
+              ></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content">
+                <span> 🍺 </span>
+                <p>12kr</p>
+              </div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city4-sunrise"></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city4-sunset"></div>
+            </div>
           </div>
         </div>
         <div class="weather-stats">
@@ -71,10 +133,26 @@
           <p id="cartagena"></p>
           <p class="city-temp" id="city5-temp"></p>
           <div class="smallbox">
-            <p class="other-destinations-localtime"></p>
-            <p>🍺- 12kr</p>
-            <p id="city5-sunrise"></p>
-            <p id="city5-sunset"></p>
+            <div class="smallbox__item">
+              <div
+                class="smallbox__item-content other-destinations-localtime"
+              ></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content">
+                <span> 🍺 </span>
+                <p>12kr</p>
+              </div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city5-sunrise"></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city5-sunset"></div>
+            </div>
           </div>
         </div>
         <div class="weather-stats">
@@ -82,10 +160,24 @@
           <p id="puertorico"></p>
           <p class="city-temp" id="city6-temp"></p>
           <div class="smallbox">
-            <p class="puertorico-localtime"></p>
-            <p>🍺- 21kr</p>
-            <p id="city6-sunrise"></p>
-            <p id="city6-sunset"></p>
+            <div class="smallbox__item">
+              <div class="smallbox__item-content puertorico-localtime"></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content">
+                <span> 🍺 </span>
+                <p>21kr</p>
+              </div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city6-sunrise"></div>
+            </div>
+
+            <div class="smallbox__item">
+              <div class="smallbox__item-content" id="city6-sunset"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -162,15 +254,15 @@
       var puertoRicoTime = puertoRico.toLocaleTimeString().slice(0, 5);
 
       document.querySelectorAll(".puertorico-localtime").forEach(el => {
-        el.innerHTML = "Localtime - " + puertoRicoTime;
+        el.innerHTML = `<span>⌚ </span> <p>${puertoRicoTime}</p>`;
       });
 
       document.querySelectorAll(".other-destinations-localtime").forEach(el => {
-        el.innerHTML = "Localtime - " + otherDestinationsTime;
+        el.innerHTML = `<span>⌚ </span> <p>${otherDestinationsTime}</p>`;
       });
 
       document.querySelectorAll(".stockholm-localtime").forEach(el => {
-        el.innerHTML = "Localtime - " + stockholmTime;
+        el.innerHTML = `<span>⌚ </span> <p>${stockholmTime}</p>`;
       });
 
       //   if (tempDiff < 5) {
